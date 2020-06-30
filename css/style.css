@@ -1,3 +1,297 @@
+:root {
+  --main-gray: #777;
+  --light-gray: #ccc;
+  --main-white: #fff;
+  --main-red: rgb(255, 69, 0);
+  --black-o: rgba(0, 0, 0, 0.6);
+  --light-black: #616161;
+  --transition: 0.2s all ease-in;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 body {
-  background-color: aqua;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #777;
+}
+a:hover {
+  text-decoration: none;
+}
+figure {
+  margin-bottom: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: var(--main-gray);
+  font-size: 1rem;
+  display: inline-block;
+}
+.btn:hover {
+  background-color: var(--light-gray);
+  color: black;
+}
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+.hero {
+  height: 60vh;
+  min-height: 400px;
+}
+.title {
+  display: inline-block;
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.grid-system {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(20vw - 20px), 1fr));
+  gap: 20px;
+}
+/* utilities */
+.img-opacity-eff:hover {
+  filter: opacity(60%);
+}
+.reverse-opacity-eff {
+  opacity: 0.6;
+  transition: var(--transition);
+}
+.reverse-opacity-eff:hover {
+  opacity: 1;
+}
+.d-grid {
+  display: grid !important;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-justify {
+  text-align: justify;
+}
+.bg-black {
+  background-color: #000;
+}
+.bg-black-o {
+  background-color: var(--black-o);
+}
+.white-bg {
+  background-color: #fff;
+}
+.bg-main-gray {
+  background-color: var(--main-gray);
+}
+.bg-light-gray {
+  background-color: var(--light-gray);
+}
+.color-black-o {
+  color: var(--black-o);
+}
+
+.color-white {
+  color: white;
+}
+.float-right {
+  float: right;
+}
+.display-block {
+  display: block;
+}
+.m-auto {
+  margin: 0 auto;
+  display: block;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.m-20 {
+  margin: 20px 0;
+}
+.align-center {
+  align-self: center;
+}
+.font-bold {
+  font-weight: bold;
+}
+.img-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.padding-14 {
+  padding: 14px;
+}
+.padding-left {
+  padding-left: 40px;
+}
+.full-img {
+  width: 100%;
+  height: 100%;
+}
+.clickable {
+  cursor: pointer;
+}
+/* nav start here */
+nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+}
+nav .nav-links ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .search .btn {
+  vertical-align: middle;
+}
+nav .search.btn:hover {
+  background-color: var(--main-red);
+  color: var(--main-white);
+  cursor: pointer;
+}
+/* nav end here */
+/* banner start here */
+header .hero {
+  background-image: url("../images/bg/parallax1.jpg");
+}
+/* main start here*/
+main section {
+  padding: 70px 0;
+  font-size: 1.1rem;
+}
+main section h2 {
+  font-size: 1.7rem;
+}
+main section h3 {
+  font-size: 0.9rem;
+}
+main .hero .title {
+  font-size: 2rem;
+}
+
+/* about me start here*/
+#about-me {
+  padding-bottom: 0;
+}
+#about-me .details,
+.achieved {
+  display: flex;
+  justify-content: space-between;
+}
+#about-me .details > *,
+.achieved > * {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+/* Progress and what I can do */
+#about-me .details figure figcaption {
+  margin-bottom: 40px;
+}
+#about-me .good-at {
+  padding-bottom: 40px;
+}
+#about-me .good-at .things .thing > p {
+  font-size: 1.2rem;
+  letter-spacing: 7px;
+}
+
+#about-me .good-at .things .thing:nth-of-type(1) .progress .percentage {
+  width: 90%;
+}
+#about-me .good-at .things .thing:nth-of-type(2) .progress .percentage {
+  width: 85%;
+}
+#about-me .good-at .things .thing:nth-of-type(3) .progress .percentage {
+  width: 75%;
+}
+
+/* achieved */
+.achieved {
+  padding: 30px 0;
+  font-size: 1.3rem;
+}
+/* about me end here*/
+/* portfolio start here */
+#portfolio {
+  padding-top: 0;
+}
+#portfolio .hero {
+  background-image: url("../images/bg/parallax2.jpg");
+}
+#portfolio .gallary img {
+  width: 100%;
+}
+#portfolio .gallary img:hover {
+  filter: opacity(60%);
+}
+.photo {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+.photo .btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 0;
+}
+.photo .btn:hover {
+  color: black;
+  background-color: var(--main-gray);
+}
+.photo figure {
+  width: 28%;
+  margin: auto;
+}
+.photo figure img {
+  width: 100%;
+}
+.photo figure figcaption {
+  font-size: 1.3rem;
+  margin-top: 25px;
+}
+/* animations */
+.animate-from-top {
+  animation: from-top 0.4s;
+}
+@keyframes from-top {
+  0% {
+    top: -300px;
+  }
+  100% {
+    top: 0;
+  }
 }
