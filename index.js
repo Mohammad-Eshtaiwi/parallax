@@ -22,10 +22,9 @@ let close = document
   .addEventListener("click", () => {
     photo.classList.remove("d-grid");
   });
+// display the photo section and change the content within it
 let figures = document.querySelectorAll(".gallary figure");
-
 function displayClickedPhoto(e) {
-  // display the photo section and change the content within it
   photo.classList.add("d-grid");
   let getSrc = e.path[0].src;
   let getAlt = e.path[0].alt;
